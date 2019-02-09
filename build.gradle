@@ -3,6 +3,13 @@ plugins {
     id 'idea'
 }
 
+sourceSets {
+    main.java.srcDir "src/main/java"
+    main.resources.srcDir "src/main/resources"
+    test.java.srcDir "src/test/java"
+    test.resources.srcDir "src/test/resources"
+}
+
 version '1.0-SNAPSHOT'
 
 repositories {

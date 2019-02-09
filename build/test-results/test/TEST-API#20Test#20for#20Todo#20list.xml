@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API Test for Todo list" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-09T09:58:34" hostname="Marvins-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="EMPTY_NAME" classname="API Test for Todo list" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
