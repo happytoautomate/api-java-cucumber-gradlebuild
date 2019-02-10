@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 844362163,
+              "duration": 955469728,
               "status": "passed"
             },
             "match": {
@@ -14,20 +14,20 @@
             }
           }
         ],
-        "line": 6,
-        "name": "Checking the list of all todos",
+        "line": 5,
+        "name": "Getting all the list of  todos",
         "description": "",
-        "id": "todo-method-test;checking-the-list-of-all-todos",
+        "id": "todo-method-test;getting-all-the-list-of--todos",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1761469599,
+              "duration": 2603753377,
               "status": "passed"
             },
-            "line": 7,
-            "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/\u0027",
+            "line": 6,
+            "name": "a \u0027GET\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/todos/\u0027",
             "match": {
               "arguments": [
                 {
@@ -36,11 +36,11 @@
                 },
                 {
                   "val": "\u0027baseurl\u0027",
-                  "offset": 29
+                  "offset": 30
                 },
                 {
                   "val": "\u0027/todos/\u0027",
-                  "offset": 56
+                  "offset": 55
                 }
               ],
               "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
@@ -49,16 +49,16 @@
           },
           {
             "result": {
-              "duration": 24636108,
+              "duration": 27294493,
               "status": "passed"
             },
-            "line": 8,
-            "name": "the response code is 200",
+            "line": 7,
+            "name": "the response status code is 200",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 21
+                  "offset": 28
                 }
               ],
               "location": "Api_steps.the_response_code_is(Integer)"
@@ -71,7 +71,7 @@
         "before": [
           {
             "result": {
-              "duration": 676888,
+              "duration": 952637,
               "status": "passed"
             },
             "match": {
@@ -79,20 +79,20 @@
             }
           }
         ],
-        "line": 10,
-        "name": "Checking the list individual todo using id \u003d 1",
+        "line": 9,
+        "name": "Getting an individual todo using ID 1",
         "description": "",
-        "id": "todo-method-test;checking-the-list-individual-todo-using-id-\u003d-1",
+        "id": "todo-method-test;getting-an-individual-todo-using-id-1",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 494269717,
+              "duration": 984110022,
               "status": "passed"
             },
-            "line": 11,
-            "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/1\u0027",
+            "line": 10,
+            "name": "a \u0027GET\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/todos/1\u0027",
             "match": {
               "arguments": [
                 {
@@ -101,11 +101,11 @@
                 },
                 {
                   "val": "\u0027baseurl\u0027",
-                  "offset": 29
+                  "offset": 30
                 },
                 {
                   "val": "\u0027/todos/1\u0027",
-                  "offset": 56
+                  "offset": 55
                 }
               ],
               "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
@@ -114,16 +114,16 @@
           },
           {
             "result": {
-              "duration": 1050885,
+              "duration": 865888,
               "status": "passed"
             },
-            "line": 12,
-            "name": "the response code is 200",
+            "line": 11,
+            "name": "the response status code is 200",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 21
+                  "offset": 28
                 }
               ],
               "location": "Api_steps.the_response_code_is(Integer)"
@@ -132,10 +132,10 @@
           },
           {
             "result": {
-              "duration": 121947915,
+              "duration": 207867334,
               "status": "passed"
             },
-            "line": 13,
+            "line": 12,
             "name": "has schema \"id,userId,title\"",
             "match": {
               "arguments": [
@@ -154,7 +154,7 @@
         "before": [
           {
             "result": {
-              "duration": 419817,
+              "duration": 2663953,
               "status": "passed"
             },
             "match": {
@@ -162,20 +162,20 @@
             }
           }
         ],
-        "line": 15,
-        "name": "Checking that updating the title and body of Todo",
+        "line": 14,
+        "name": "Create new todo list",
         "description": "",
-        "id": "todo-method-test;checking-that-updating-the-title-and-body-of-todo",
+        "id": "todo-method-test;create-new-todo-list",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 951808903,
+              "duration": 1224570494,
               "status": "passed"
             },
-            "line": 16,
-            "name": "a \u0027POST\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts\u0027 with the following:",
+            "line": 15,
+            "name": "a \u0027POST\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts\u0027 with the following:",
             "match": {
               "arguments": [
                 {
@@ -184,11 +184,11 @@
                 },
                 {
                   "val": "\u0027baseurl\u0027",
-                  "offset": 30
+                  "offset": 31
                 },
                 {
                   "val": "\u0027/posts\u0027",
-                  "offset": 57
+                  "offset": 56
                 }
               ],
               "location": "Api_steps.a_request_is_send_with_and_parameter_is_with_the_following(String,String,String,DataTable)"
@@ -215,16 +215,16 @@
           },
           {
             "result": {
-              "duration": 370547,
+              "duration": 459725,
               "status": "passed"
             },
-            "line": 19,
-            "name": "the response code is 201",
+            "line": 18,
+            "name": "the response status code is 201",
             "match": {
               "arguments": [
                 {
                   "val": "201",
-                  "offset": 21
+                  "offset": 28
                 }
               ],
               "location": "Api_steps.the_response_code_is(Integer)"
@@ -237,7 +237,7 @@
         "before": [
           {
             "result": {
-              "duration": 1946313,
+              "duration": 3385680,
               "status": "passed"
             },
             "match": {
@@ -245,20 +245,20 @@
             }
           }
         ],
-        "line": 21,
-        "name": "PUT test",
+        "line": 20,
+        "name": "Update the title and body of existing Todo",
         "description": "",
-        "id": "todo-method-test;put-test",
+        "id": "todo-method-test;update-the-title-and-body-of-existing-todo",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1019190484,
+              "duration": 1103219341,
               "status": "passed"
             },
-            "line": 22,
-            "name": "a \u0027PUT\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027 with the following:",
+            "line": 21,
+            "name": "a \u0027PUT\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts/10\u0027 with the following:",
             "match": {
               "arguments": [
                 {
@@ -267,11 +267,11 @@
                 },
                 {
                   "val": "\u0027baseurl\u0027",
-                  "offset": 29
+                  "offset": 30
                 },
                 {
                   "val": "\u0027/posts/10\u0027",
-                  "offset": 56
+                  "offset": 55
                 }
               ],
               "location": "Api_steps.a_request_is_send_with_and_parameter_is_with_the_following(String,String,String,DataTable)"
@@ -298,16 +298,16 @@
           },
           {
             "result": {
-              "duration": 390418,
+              "duration": 1056963,
               "status": "passed"
             },
-            "line": 25,
-            "name": "the response code is 200",
+            "line": 24,
+            "name": "the response status code is 200",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 21
+                  "offset": 28
                 }
               ],
               "location": "Api_steps.the_response_code_is(Integer)"
@@ -320,7 +320,7 @@
         "before": [
           {
             "result": {
-              "duration": 972852,
+              "duration": 790498,
               "status": "passed"
             },
             "match": {
@@ -328,20 +328,20 @@
             }
           }
         ],
-        "line": 27,
-        "name": "Delete test",
+        "line": 26,
+        "name": "Delete existing todo",
         "description": "",
-        "id": "todo-method-test;delete-test",
+        "id": "todo-method-test;delete-existing-todo",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 914478210,
+              "duration": 774511475,
               "status": "passed"
             },
-            "line": 28,
-            "name": "a \u0027DELETE\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027",
+            "line": 27,
+            "name": "a \u0027DELETE\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts/10\u0027",
             "match": {
               "arguments": [
                 {
@@ -350,11 +350,11 @@
                 },
                 {
                   "val": "\u0027baseurl\u0027",
-                  "offset": 32
+                  "offset": 33
                 },
                 {
                   "val": "\u0027/posts/10\u0027",
-                  "offset": 59
+                  "offset": 58
                 }
               ],
               "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
@@ -363,16 +363,16 @@
           },
           {
             "result": {
-              "duration": 316108,
+              "duration": 371796,
               "status": "passed"
             },
-            "line": 29,
-            "name": "the response code is 200",
+            "line": 28,
+            "name": "the response status code is 200",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 21
+                  "offset": 28
                 }
               ],
               "location": "Api_steps.the_response_code_is(Integer)"

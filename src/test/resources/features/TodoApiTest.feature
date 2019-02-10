@@ -26,11 +26,3 @@ Feature: Todo Method Test
   Scenario: Delete existing todo
     When a 'DELETE' request is send using 'baseurl' with parameter '/posts/10'
     Then the response status code is 200
-
-
-
-
-
-
-
-

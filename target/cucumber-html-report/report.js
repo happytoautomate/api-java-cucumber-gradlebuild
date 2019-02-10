@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Checking the list of all todos",
+  "name": "Getting all the list of  todos",
   "description": "",
   "keyword": "Scenario"
 });
@@ -13,7 +13,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/\u0027",
+  "name": "a \u0027GET\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/todos/\u0027",
   "keyword": "Given "
 });
 formatter.match({
@@ -23,7 +23,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the response code is 200",
+  "name": "the response status code is 200",
   "keyword": "Then "
 });
 formatter.match({
@@ -33,7 +33,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Checking the list individual todo using id \u003d 1",
+  "name": "Getting an individual todo using ID 1",
   "description": "",
   "keyword": "Scenario"
 });
@@ -41,7 +41,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/1\u0027",
+  "name": "a \u0027GET\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/todos/1\u0027",
   "keyword": "Given "
 });
 formatter.match({
@@ -51,7 +51,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the response code is 200",
+  "name": "the response status code is 200",
   "keyword": "Then "
 });
 formatter.match({
@@ -71,7 +71,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Checking that updating the title and body of Todo",
+  "name": "Create new todo list",
   "description": "",
   "keyword": "Scenario"
 });
@@ -79,7 +79,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "a \u0027POST\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts\u0027 with the following:",
+  "name": "a \u0027POST\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts\u0027 with the following:",
   "rows": [
     {
       "cells": [
@@ -107,7 +107,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the response code is 201",
+  "name": "the response status code is 201",
   "keyword": "Then "
 });
 formatter.match({
@@ -117,7 +117,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "PUT test",
+  "name": "Update the title and body of existing Todo",
   "description": "",
   "keyword": "Scenario"
 });
@@ -125,7 +125,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "a \u0027PUT\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027 with the following:",
+  "name": "a \u0027PUT\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts/10\u0027 with the following:",
   "rows": [
     {
       "cells": [
@@ -153,7 +153,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the response code is 200",
+  "name": "the response status code is 200",
   "keyword": "Then "
 });
 formatter.match({
@@ -163,7 +163,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Delete test",
+  "name": "Delete existing todo",
   "description": "",
   "keyword": "Scenario"
 });
@@ -171,7 +171,7 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "a \u0027DELETE\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027",
+  "name": "a \u0027DELETE\u0027 request is send using \u0027baseurl\u0027 with parameter \u0027/posts/10\u0027",
   "keyword": "When "
 });
 formatter.match({
@@ -181,7 +181,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the response code is 200",
+  "name": "the response status code is 200",
   "keyword": "Then "
 });
 formatter.match({

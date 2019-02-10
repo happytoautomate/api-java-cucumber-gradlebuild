@@ -1,4 +1,4 @@
-package steps_definition;
+package runner;
 
 
 import cucumber.api.CucumberOptions;
