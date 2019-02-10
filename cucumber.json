@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 907325026,
+              "duration": 844362163,
               "status": "passed"
             },
             "match": {
@@ -14,20 +14,20 @@
             }
           }
         ],
-        "line": 4,
+        "line": 6,
         "name": "Checking the list of all todos",
         "description": "",
-        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;checking-the-list-of-all-todos",
+        "id": "todo-method-test;checking-the-list-of-all-todos",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1930181658,
+              "duration": 1761469599,
               "status": "passed"
             },
-            "line": 5,
-            "name": "a \u0027GET\u0027 request is send with \u0027todosApiURL\u0027",
+            "line": 7,
+            "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/\u0027",
             "match": {
               "arguments": [
                 {
@@ -35,20 +35,24 @@
                   "offset": 2
                 },
                 {
-                  "val": "\u0027todosApiURL\u0027",
+                  "val": "\u0027baseurl\u0027",
                   "offset": 29
+                },
+                {
+                  "val": "\u0027/todos/\u0027",
+                  "offset": 56
                 }
               ],
-              "location": "Api_steps.a_request_is_send_with(String,String)"
+              "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 22866924,
+              "duration": 24636108,
               "status": "passed"
             },
-            "line": 6,
+            "line": 8,
             "name": "the response code is 200",
             "match": {
               "arguments": [
@@ -67,7 +71,7 @@
         "before": [
           {
             "result": {
-              "duration": 503965,
+              "duration": 676888,
               "status": "passed"
             },
             "match": {
@@ -78,17 +82,17 @@
         "line": 10,
         "name": "Checking the list individual todo using id \u003d 1",
         "description": "",
-        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;checking-the-list-individual-todo-using-id-\u003d-1",
+        "id": "todo-method-test;checking-the-list-individual-todo-using-id-\u003d-1",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 630410327,
+              "duration": 494269717,
               "status": "passed"
             },
             "line": 11,
-            "name": "a \u0027GET\u0027 request is send with \u0027todosApiURL\u0027 and parameter is 1",
+            "name": "a \u0027GET\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/todos/1\u0027",
             "match": {
               "arguments": [
                 {
@@ -96,21 +100,21 @@
                   "offset": 2
                 },
                 {
-                  "val": "\u0027todosApiURL\u0027",
+                  "val": "\u0027baseurl\u0027",
                   "offset": 29
                 },
                 {
-                  "val": "1",
-                  "offset": 60
+                  "val": "\u0027/todos/1\u0027",
+                  "offset": 56
                 }
               ],
-              "location": "Api_steps.a_request_is_send_with_with(String,String,Integer)"
+              "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 762037,
+              "duration": 1050885,
               "status": "passed"
             },
             "line": 12,
@@ -128,7 +132,7 @@
           },
           {
             "result": {
-              "duration": 131750883,
+              "duration": 121947915,
               "status": "passed"
             },
             "line": 13,
@@ -150,7 +154,7 @@
         "before": [
           {
             "result": {
-              "duration": 958843,
+              "duration": 419817,
               "status": "passed"
             },
             "match": {
@@ -159,19 +163,19 @@
           }
         ],
         "line": 15,
-        "name": "Post test",
+        "name": "Checking that updating the title and body of Todo",
         "description": "",
-        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;post-test",
+        "id": "todo-method-test;checking-that-updating-the-title-and-body-of-todo",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1090627075,
+              "duration": 951808903,
               "status": "passed"
             },
             "line": 16,
-            "name": "a \u0027POST\u0027 request is send with \u0027todosApiURL\u0027 with the following:",
+            "name": "a \u0027POST\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts\u0027 with the following:",
             "match": {
               "arguments": [
                 {
@@ -179,25 +183,31 @@
                   "offset": 2
                 },
                 {
-                  "val": "\u0027todosApiURL\u0027",
+                  "val": "\u0027baseurl\u0027",
                   "offset": 30
+                },
+                {
+                  "val": "\u0027/posts\u0027",
+                  "offset": 57
                 }
               ],
-              "location": "Api_steps.a_request_is_send_with_with_the_following(String,String,DataTable)"
+              "location": "Api_steps.a_request_is_send_with_and_parameter_is_with_the_following(String,String,String,DataTable)"
             },
             "rows": [
               {
                 "cells": [
                   "title",
                   "userId",
-                  "id"
+                  "id",
+                  "body"
                 ]
               },
               {
                 "cells": [
-                  "AddMe",
+                  "Watch Movie",
                   "123",
-                  "201"
+                  "201",
+                  "Schedule 1 movie every 2 weeks"
                 ]
               }
             ],
@@ -205,7 +215,7 @@
           },
           {
             "result": {
-              "duration": 493312,
+              "duration": 370547,
               "status": "passed"
             },
             "line": 19,
@@ -227,7 +237,7 @@
         "before": [
           {
             "result": {
-              "duration": 2400881,
+              "duration": 1946313,
               "status": "passed"
             },
             "match": {
@@ -235,20 +245,20 @@
             }
           }
         ],
-        "line": 22,
+        "line": 21,
         "name": "PUT test",
         "description": "",
-        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;put-test",
+        "id": "todo-method-test;put-test",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1018567585,
+              "duration": 1019190484,
               "status": "passed"
             },
-            "line": 23,
-            "name": "a \u0027PUT\u0027 request is send with \u0027todosApiURL\u0027 with the following:",
+            "line": 22,
+            "name": "a \u0027PUT\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027 with the following:",
             "match": {
               "arguments": [
                 {
@@ -256,25 +266,31 @@
                   "offset": 2
                 },
                 {
-                  "val": "\u0027todosApiURL\u0027",
+                  "val": "\u0027baseurl\u0027",
                   "offset": 29
+                },
+                {
+                  "val": "\u0027/posts/10\u0027",
+                  "offset": 56
                 }
               ],
-              "location": "Api_steps.a_request_is_send_with_with_the_following(String,String,DataTable)"
+              "location": "Api_steps.a_request_is_send_with_and_parameter_is_with_the_following(String,String,String,DataTable)"
             },
             "rows": [
               {
                 "cells": [
                   "title",
                   "userId",
-                  "id"
+                  "id",
+                  "body"
                 ]
               },
               {
                 "cells": [
-                  "UpdateMe",
-                  "123",
-                  "1"
+                  "Go to Gym",
+                  "1",
+                  "1",
+                  "Do 15x push every day"
                 ]
               }
             ],
@@ -282,16 +298,80 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c201\u003e doesn\u0027t match actual status code \u003c404\u003e.\n\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)\n\tat com.jayway.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)\n\tat com.jayway.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)\n\tat steps_definition.Api_steps.the_response_code_is(Api_steps.java:114)\n\tat ✽.the response code is 201(src/test/resources/features/TodoApiTest.feature:26)\n",
-              "duration": 9706370,
-              "status": "failed"
+              "duration": 390418,
+              "status": "passed"
             },
-            "line": 26,
-            "name": "the response code is 201",
+            "line": 25,
+            "name": "the response code is 200",
             "match": {
               "arguments": [
                 {
-                  "val": "201",
+                  "val": "200",
+                  "offset": 21
+                }
+              ],
+              "location": "Api_steps.the_response_code_is(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 972852,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Api_steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Delete test",
+        "description": "",
+        "id": "todo-method-test;delete-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 914478210,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "a \u0027DELETE\u0027 request is send with \u0027baseurl\u0027 and parameter is \u0027/posts/10\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027DELETE\u0027",
+                  "offset": 2
+                },
+                {
+                  "val": "\u0027baseurl\u0027",
+                  "offset": 32
+                },
+                {
+                  "val": "\u0027/posts/10\u0027",
+                  "offset": 59
+                }
+              ],
+              "location": "Api_steps.a_request_is_send_with_with(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 316108,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the response code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
                   "offset": 21
                 }
               ],
@@ -302,9 +382,9 @@
         ]
       }
     ],
-    "name": "To write scenarios to test the Todo API using different http request.",
-    "description": "",
-    "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.",
+    "name": "Todo Method Test",
+    "description": "  To write scenarios to test the Todo API using different http request.",
+    "id": "todo-method-test",
     "keyword": "Feature",
     "uri": "src/test/resources/features/TodoApiTest.feature",
     "tags": []

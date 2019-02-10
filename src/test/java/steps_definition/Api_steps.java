@@ -7,14 +7,11 @@ import com.jayway.restassured.response.ValidatableResponse;
 import com.jayway.restassured.specification.RequestSpecification;
 import cucumber.api.Scenario;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gherkin.deps.com.google.gson.JsonObject;
-import io.cucumber.datatable.DataTable;
 import managers.FileReaderManager;
-import com.jayway.restassured.*;
 import org.junit.Assert;
 
 import java.util.Map;
@@ -34,7 +31,6 @@ public class Api_steps {
 
         switch (requestMethod) {
             case "GET":
-                //response = request.get(url).then();
                 response = request.get(url + param).then();
                 break;
 
@@ -80,13 +76,12 @@ public class Api_steps {
                 // Send Update request to url, sending the json object as body
                 response = request.header("Content-Type", "application/json")
                         .body(putObject.toString())
-                        .when().put(url).then();
+                        .when().put(url + param).then();
                 break;
 
 
             case "DELETE":
                 response = request.delete(url + param).then();
-
                 break;
         }
     }
@@ -96,48 +91,21 @@ public class Api_steps {
         request = RestAssured.with();
     }
 
-/*
-    @Given("a {string} request is send with {string}")
-    public void a_request_is_send_with(String requestMethod, String endPointUrl) {
-        // Initialize config reader
-        dataProviders.ConfigFileReader reader = FileReaderManager.getInstance().getConfigReader();
-        // Get the url from the config file using the endPointUrl as key
-        String url = reader.getApplicationUrl(endPointUrl);
-        // Execute the call based on the request method
-
-        executeRequest(requestMethod, url);
-
-        System.out.println(requestMethod + " " + endPointUrl);
-    }*/
-
-    @Then("the response code is {int}")
+    @Then("the response status code is {int}")
     public void the_response_code_is(Integer code) {
         response.statusCode(code);
     }
 
-
-    @Given("a {string} request is send with {string} and parameter is {string}")
+    @Given("a {string} request is send using {string} with parameter {string}")
     public void a_request_is_send_with_with(String requestMethod, String endPointUrl, String param) {
         // Initialize config reader
         dataProviders.ConfigFileReader reader = FileReaderManager.getInstance().getConfigReader();
         // Get the url from the config file using the endPointUrl as key
         String url = reader.getApplicationUrl(endPointUrl);
         // Execute the call based on the request method
-
         executeRequest(requestMethod, url, param);
 
     }
-/*
-    @When("a {string} request is send with {string} with the following:")
-    public void a_request_is_send_with_with_the_following(String requestMethod, String endPointUrl, io.cucumber.datatable.DataTable dataTable) {
-
-        dataProviders.ConfigFileReader reader = FileReaderManager.getInstance().getConfigReader();
-
-        // For other transformations you can register a DataTableType.
-        String url = reader.getApplicationUrl(endPointUrl);
-
-        executeRequest(requestMethod, url, dataTable);
-    }*/
 
     @Then("has schema {string}")
     public void has_schema(String schema) {
@@ -154,14 +122,14 @@ public class Api_steps {
         System.out.println(map);
     }
 
-    @When("a {string} request is send with {string} and parameter is {string} with the following:")
+    @When("a {string} request is send using {string} with parameter {string} with the following:")
     public void a_request_is_send_with_and_parameter_is_with_the_following(String requestMethod, String endPointUrl, String param, io.cucumber.datatable.DataTable dataTable) {
-
+        // Initialize config reader
         dataProviders.ConfigFileReader reader = FileReaderManager.getInstance().getConfigReader();
 
-        // For other transformations you can register a DataTableType.
+        // Get the url from the config file using the endPointUrl as key
         String url = reader.getApplicationUrl(endPointUrl);
-
+        // Execute the call based on the request method
         executeRequest(requestMethod, url, param, dataTable);
     }
 }

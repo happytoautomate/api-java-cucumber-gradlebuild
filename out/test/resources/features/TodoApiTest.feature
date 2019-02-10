@@ -1,33 +1,31 @@
-Feature: To write scenarios to test the Todo API using different http request.
+Feature: Todo Method Test
 
+  To write scenarios to test the Todo API using different http request.
 
-  Scenario: Checking the list of all todos
-   Given a 'GET' request is send with 'baseurl' and parameter is '/todos/'
-    Then the response code is 200
+  Scenario: Getting all the list of  todos
+   Given a 'GET' request is send using 'baseurl' with parameter '/todos/'
+    Then the response status code is 200
 
-
-  Scenario: Checking the list individual todo using id = 1
-    Given a 'GET' request is send with 'baseurl' and parameter is '/todos/1'
-    Then the response code is 200
+  Scenario: Getting an individual todo using ID 1
+    Given a 'GET' request is send using 'baseurl' with parameter '/todos/1'
+    Then the response status code is 200
     And has schema "id,userId,title"
 
-  Scenario: Post test
-    When a 'POST' request is send with 'baseurl' and parameter is '/posts' with the following:
-       | title | userId | id |
-       | AddMe | 123 | 201 |
-    Then the response code is 201
+  Scenario: Create new todo list
+    When a 'POST' request is send using 'baseurl' with parameter '/posts' with the following:
+       | title       | userId | id | body |
+       | Watch Movie | 123    | 201 | Schedule 1 movie every 2 weeks |
+    Then the response status code is 201
 
-
-  Scenario: PUT test
-    When a 'PUT' request is send with 'baseurl' and parameter is '/posts/10' with the following:
+  Scenario: Update the title and body of existing Todo
+    When a 'PUT' request is send using 'baseurl' with parameter '/posts/10' with the following:
       | title | userId | id | body |
-      | UpdateMe | 1 | 1 | testing |
-    Then the response code is 201
+      | Go to Gym | 1 | 1 | Do 15x push every day  |
+    Then the response status code is 200
 
-  Scenario: Delete test
-    When a 'DELETE' request is send with 'baseurl' and parameter is '/posts/10'
-    Then the response code is 200
-
+  Scenario: Delete existing todo
+    When a 'DELETE' request is send using 'baseurl' with parameter '/posts/10'
+    Then the response status code is 200
 
 
 
