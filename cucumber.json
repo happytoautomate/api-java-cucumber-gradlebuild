@@ -3,39 +3,301 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 907325026,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Api_steps.before(Scenario)"
+            }
+          }
+        ],
         "line": 4,
-        "name": "Checking the list of todos",
+        "name": "Checking the list of all todos",
         "description": "",
-        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;checking-the-list-of-todos",
+        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;checking-the-list-of-all-todos",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1930181658,
+              "status": "passed"
             },
             "line": 5,
-            "name": "A GET request is send to \"/todo\"",
-            "match": {},
+            "name": "a \u0027GET\u0027 request is send with \u0027todosApiURL\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027GET\u0027",
+                  "offset": 2
+                },
+                {
+                  "val": "\u0027todosApiURL\u0027",
+                  "offset": 29
+                }
+              ],
+              "location": "Api_steps.a_request_is_send_with(String,String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 22866924,
+              "status": "passed"
             },
             "line": 6,
             "name": "the response code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 21
+                }
+              ],
+              "location": "Api_steps.the_response_code_is(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 503965,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Api_steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Checking the list individual todo using id \u003d 1",
+        "description": "",
+        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;checking-the-list-individual-todo-using-id-\u003d-1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 630410327,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "a \u0027GET\u0027 request is send with \u0027todosApiURL\u0027 and parameter is 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027GET\u0027",
+                  "offset": 2
+                },
+                {
+                  "val": "\u0027todosApiURL\u0027",
+                  "offset": 29
+                },
+                {
+                  "val": "1",
+                  "offset": 60
+                }
+              ],
+              "location": "Api_steps.a_request_is_send_with_with(String,String,Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 762037,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the response code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 21
+                }
+              ],
+              "location": "Api_steps.the_response_code_is(Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 131750883,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "the JSON response should",
-            "match": {},
+            "line": 13,
+            "name": "has schema \"id,userId,title\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id,userId,title\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Api_steps.has_schema(String)"
+            },
             "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 958843,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Api_steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Post test",
+        "description": "",
+        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;post-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1090627075,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "a \u0027POST\u0027 request is send with \u0027todosApiURL\u0027 with the following:",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027POST\u0027",
+                  "offset": 2
+                },
+                {
+                  "val": "\u0027todosApiURL\u0027",
+                  "offset": 30
+                }
+              ],
+              "location": "Api_steps.a_request_is_send_with_with_the_following(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "title",
+                  "userId",
+                  "id"
+                ]
+              },
+              {
+                "cells": [
+                  "AddMe",
+                  "123",
+                  "201"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 493312,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the response code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 21
+                }
+              ],
+              "location": "Api_steps.the_response_code_is(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2400881,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Api_steps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "PUT test",
+        "description": "",
+        "id": "to-write-scenarios-to-test-the-todo-api-using-different-http-request.;put-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1018567585,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "a \u0027PUT\u0027 request is send with \u0027todosApiURL\u0027 with the following:",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027PUT\u0027",
+                  "offset": 2
+                },
+                {
+                  "val": "\u0027todosApiURL\u0027",
+                  "offset": 29
+                }
+              ],
+              "location": "Api_steps.a_request_is_send_with_with_the_following(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "title",
+                  "userId",
+                  "id"
+                ]
+              },
+              {
+                "cells": [
+                  "UpdateMe",
+                  "123",
+                  "1"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c201\u003e doesn\u0027t match actual status code \u003c404\u003e.\n\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)\n\tat com.jayway.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)\n\tat com.jayway.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)\n\tat steps_definition.Api_steps.the_response_code_is(Api_steps.java:114)\n\tat ✽.the response code is 201(src/test/resources/features/TodoApiTest.feature:26)\n",
+              "duration": 9706370,
+              "status": "failed"
+            },
+            "line": 26,
+            "name": "the response code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 21
+                }
+              ],
+              "location": "Api_steps.the_response_code_is(Integer)"
+            },
+            "keyword": "Then "
           }
         ]
       }

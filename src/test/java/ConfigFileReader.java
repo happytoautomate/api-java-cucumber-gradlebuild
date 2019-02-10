@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigFileReader {
 
     private Properties properties;
-    private final String propertyFilePath = "config/configuration.properties";
+    private final String propertyFilePath = "config/config.properties";
 
 
     public ConfigFileReader() {
@@ -31,8 +31,8 @@ public class ConfigFileReader {
         }
     }
 
-    public String getApplicationUrl() {
-        String url = properties.getProperty("todosApiURL");
+    public String getApplicationUrl(String uri) {
+        String url = properties.getProperty(uri);
         if(url != null) return url;
         else throw new RuntimeException("url not specified in the Configuration.properties file.");
     }
