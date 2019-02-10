@@ -12,7 +12,7 @@ Feature: To write scenarios to test the Todo API using different http request.
     And has schema "id,userId,title"
 
   Scenario: Post test
-    When a 'POST' request is send with 'baseurl' and parameter is '/posts/1' with the following:
+    When a 'POST' request is send with 'baseurl' and parameter is '/posts' with the following:
        | title | userId | id |
        | AddMe | 123 | 201 |
     Then the response code is 201
@@ -24,7 +24,9 @@ Feature: To write scenarios to test the Todo API using different http request.
       | UpdateMe | 1 | 1 | testing |
     Then the response code is 201
 
-
+  Scenario: Delete test
+    When a 'DELETE' request is send with 'baseurl' and parameter is '/posts/10'
+    Then the response code is 200
 
 
 

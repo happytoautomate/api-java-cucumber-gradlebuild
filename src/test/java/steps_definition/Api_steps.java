@@ -26,7 +26,7 @@ public class Api_steps {
     private ValidatableResponse response;
 
 
-    private void executeRequest(String param, String requestMethod, String url) {
+    private void executeRequest(String requestMethod, String url, String param) {
         executeRequest(requestMethod, url, param, null);
     }
 
@@ -34,8 +34,8 @@ public class Api_steps {
 
         switch (requestMethod) {
             case "GET":
-                response = request.get(url).then();
-
+                //response = request.get(url).then();
+                response = request.get(url + param).then();
                 break;
 
             case "POST":
@@ -85,6 +85,8 @@ public class Api_steps {
 
 
             case "DELETE":
+                response = request.delete(url + param).then();
+
                 break;
         }
     }
@@ -150,9 +152,7 @@ public class Api_steps {
             Assert.assertTrue(map.containsKey(st.nextElement()));
         }
         System.out.println(map);
-
     }
-
 
     @When("a {string} request is send with {string} and parameter is {string} with the following:")
     public void a_request_is_send_with_and_parameter_is_with_the_following(String requestMethod, String endPointUrl, String param, io.cucumber.datatable.DataTable dataTable) {
@@ -165,4 +165,3 @@ public class Api_steps {
         executeRequest(requestMethod, url, param, dataTable);
     }
 }
-
